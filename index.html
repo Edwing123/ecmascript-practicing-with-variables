@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/hightlight-styles/a11y-dark.css" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+    <title>Learning about variables</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <header class="app-header base-layout" role="region">
+        <span class="app-title rough-highlight">Edwing123🔥🚀</span>
+        <span
+          class="app-clock rough-box"
+          aria-readonly="true"
+          aria
+          aria-label="Current time"
+        >
+          <time id="timer" role="timer">loading ...</time>
+        </span>
+      </header>
+
+      <main class="app-main">
+        <section role="main" class="app-main-content base-layout">
+          <h1 class="app-subtitle">
+            Learning about variables in JavaScript 📚🤖
+          </h1>
+
+          <!-- let's gooooo -->
+          <p class="app-content-text">
+            Let's learn about variables in JavaScript, also the different ways
+            we have to define a variable, for example, nowadays we have
+            <code class="inline-code">let</code> and
+            <code class="inline-code">const</code> which replace
+            <code class="inline-code">var</code>, but why ? well, let's see
+            that.
+          </p>
+
+          <h2
+            class="app-content-title rough-highlight"
+            id="what-are-variables-in-a-programming-language"
+          >
+            What are variables in a programming language ?
+          </h2>
+
+          <p class="app-content-text">
+            In my understanding variables are like boxes, in where you can store
+            values, so then you can use them later in your program. That's a
+            simple definition I can give, but of course there's more behind
+            them, since JavaScript is a hight-level programming language, these
+            kind of things are very hidden and we only have to think they just
+            work as container for our values.
+          </p>
+
+          <p class="app-content-text">
+            Variables are useful, as we know their purpose is to give us a way
+            to store values and then use them later, with that we can avoid
+            ourselves of being writing things more than once.
+          </p>
+
+          <p class="app-content-text">
+            Let's see an example.
+          </p>
+
+          <pre>
+            <code class="javascript">
+// main.js
+// using the log function from the console object to log values to console (browser, nodejs)
+console.log("My name is Edwin")
+console.log("Edwin is from Nicaragua")
+console.log("Edwin learns about JavaScript and variables")
+console.log("There's many Edwin in many places")
+console.log("What about if my name is not Edwin anymore ?")
+console.log("Waittt I'll have to change all those names")
+            </code>
+          </pre>
+
+          <p class="app-content-text">
+            As you can see, I am using the word
+            <span class="text-bold">Edwin</span> many times, but there could be
+            moment when I don't wanna use Edwin for my name, maybe I wanna use
+            Edwing123 (my username). Well changing that would not be hard since
+            there are many Edwins but not too many, but yeah, with the time it
+            can get bothersome 🙁.
+          </p>
+
+          <h2
+            class="app-content-title rough-highlight"
+            id="variables-to-the-recue"
+          >
+            Variables to the rescue 🤝🤜🤛
+          </h2>
+
+          <p class="app-content-text">
+            In JavaScript we declare a variable and assign it value, we store an
+            array, a number, a string, an object, a function expression, another
+            variable, well another variable since a variable works as a
+            reference for the value it holds so it's like assigning the value
+            directly.
+          </p>
+
+          <pre>
+            <code class="language-javascript">
+/*
+ * Declaring a variable simply means we let the JavaScript compiler know about it, 
+ * them we can assign it a value or we can assign it a value the same time we declare it.
+ *
+ * In JavaScript we declare a variable with the var keyword, and following this syntax:
+ */
+
+// I declare a variable, but not assign it a value
+var name
+
+// now I assign it a value with the assignment operator, in this case a string
+name = "Edwin"
+
+// now I can use that value, which is a reference for the string "Edwin"
+console.log("My name is " + name)
+console.log(name + " is from Nicaragua")
+console.log(name + " is 19 years old")
+
+// we can make an in-place assignment
+var age = 19
+var country = "Nicaragua"
+
+// template literals to easy string formatting
+var message = `Hi, my name is ${name}, I am from ${country} and I'm ${age} years old`
+console.log(message)
+
+var number1 = 100
+var number2 = 100
+
+// assign expressions, since this expression evaluates to 200, that's the value which sum references
+var sum = number1 + number2
+
+// anonymous function expression ? yeah baby
+var getRandomNumber = function(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + 1)
+}
+
+// stores a random number in range of 1 to 100
+var randomNumber = getRandomNumber(1, 100)
+
+// go to the console and see the returned random number
+console.log(randomNumber)
+
+// arrays
+var fruits = ["Apple", "Mango", "Orange"]
+var programmingLanguages = ["Python", "JavaScript", "Go", "PHP"]
+var javaScriptUIFrameworks = ["ReactJS", "VueJS", "SvelteJS", "AngularJS"]
+
+// objects
+var me = {
+  name: "Edwin",
+  age: 19,
+  country: "Nicaragua"
+}
+
+// wait ... also classes ?
+class User {
+  constructor(name, age, country) {
+    this.name = name
+    this.age = age
+    this.country = country
+  }
+
+  sayName() {
+    console.log(`My name is ${this.name}`)
+  }
+}
+
+// reference for User class
+var variableForUserClass = User
+
+// instantiate class
+var user = new variableForUserClass("Edwin", 19, "Nicaragua")
+
+// see console
+user.sayName()
+            </code>
+          </pre>
+
+          <p class="app-content-text">
+            I hope that example can give you a little glance of what you can
+            store in a variable, variables are very useful, something to notice
+            here is that when we define variables,
+            <span class="text-bold">we should use descriptive names</span>, also
+            there are some rules for variables names.
+          </p>
+
+          <h2
+            class="app-content-title rough-highlight"
+            id="rules-when-naming-variables"
+          >
+            Rules when naming variables
+          </h2>
+
+          <p class="app-content-text">
+            The syntax for declaring variables depends on the programming
+            language of course, also the characters we can use for its name, in
+            JavaScript we use alphanumerical
+            <span class="text-bold">[a-zA-Z0-9]</span> characters, dollar sign
+            <span class="text-bold">$</span> and underscore
+            <span class="text-bold">_</span>, we cannot use
+            <span class="text-bold">[.-^&,*/%]</span>, etc. I think it's easier
+            to remember the ones we can use for naming variables.
+          </p>
+
+          <p class="app-content-text">
+            Also variables can only start with undecore
+            <span class="text-bold">_</span>,
+            <span class="text-bold">$</span> and letters
+            <span class="text-bold">[a-zA-Z]</span>, but not with numbers
+          </p>
+
+          <p class="app-content-text">
+            Let's see some code.
+          </p>
+
+          <pre>
+            <code class="language-javascript">
+// correct 😀
+var name = "Edwin"
+var age = 19
+var $country = "Nicaragua"
+var _language = "Spanish"
+
+
+// incorrect 👀
+var 3days = "Three days of summer"
+var myScoreIn% = "80%"
+
+// if we look closely, since 12 is number, so a variable with that name is not possible
+var 12 = 12
+
+// an underscore works though
+var _12 = 12
+            </code>
+          </pre>
+
+          <p class="app-content-text">
+            Now we know this, that's fine.
+          </p>
+
+          <h2
+            class="app-content-title rough-highlight"
+            id="variables-naming-conventions"
+          >
+            Variables naming conventions
+          </h2>
+
+          <p class="app-content-text">
+            When we declare a variable something we should do is to give a
+            descriptive name, give it a name which describes what it stores, its
+            purpose, etc. A convention is something you can follow or not, it's
+            like a way of doing something, in this case conventions for naming
+            variables are just ways to name variables.
+          </p>
+
+          <p class="app-content-text">
+            In JavaScript you can name your variables anyway you want, of course
+            you should give them a descriptive name. I personally use the
+            <span class="text-bold">camelCase</span> naming convention, which
+            consists of naming your variable like this:
+          </p>
+
+          <pre>
+            <code class="language-javascript">
+// camelCase
+// you write its name in lowercase
+var name = "Edwin"
+
+// if its name has more than one word, you do the following:
+// the first word in lowercase, then the next words only their first letters in uppercase
+var favoriteLanguage = "Japanese"
+
+// more examples
+var age = 19
+var isInAllowedAge = age >= 18
+
+// extra code
+if (isInAllowedAge) {
+  console.log("Welcome")
+} else {
+  console.log("Bye")
+}
+
+// There are more conventions
+// snake_case, in which every is separated by an undecore
+var name = "Edwin"
+var age = 19
+
+// long name for this post's example
+var is_user_allowed_to_be_here = age >= 18
+
+
+            </code>
+          </pre>
+
+          <p class="app-content-text">
+            There are more ways,
+            <span class="rough-box">it's really up to you</span>, well if you
+            are working with a team, it's up you and the team
+          </p>
+        </section>
+
+        <!-- aside content -->
+        <aside
+          class="app-content-menu base-layout"
+          id="app-aside-content-menu"
+          aria-label="navigation menu for page contents"
+        >
+          <h3 class="app-content-menu-title">Table of contents</h3>
+          <ul class="app-content-menu-list" role="menubar">
+            <li class="app-content-menu-item" role="menuitem">
+              <a
+                href="#what-are-variables-in-a-programming-language"
+                class="app-content-menu-link"
+                role="link"
+              >
+                What are variables in a programming language ?
+              </a>
+            </li>
+            <li class="app-content-menu-item" role="menuitem">
+              <a
+                href="#variables-to-the-recue"
+                class="app-content-menu-link"
+                role="link"
+              >
+                Variables to the rescue
+              </a>
+            </li>
+            <li class="app-content-menu-item" role="menuitem">
+              <a
+                href="#rules-when-naming-variables"
+                class="app-content-menu-link"
+                role="link"
+              >
+                Rules when naming variables
+              </a>
+            </li>
+            <li class="app-content-menu-item" role="menuitem">
+              <a
+                href="#variables-naming-conventions"
+                class="app-content-menu-link"
+                role="link"
+              >
+                Variables naming conventions
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </main>
+
+      <footer class="app-footer base-layout">
+        <p class="app-footer-text">
+          <span class="rough-box">
+            Source code on Github
+          </span>
+        </p>
+      </footer>
+    </div>
+
+    <script src="./src/scripts/highlight.pack.js"></script>
+    <script src="./src/scripts/rough-notation.iife.js"></script>
+    <script src="./src/scripts/main.js"></script>
+  </body>
+</html>

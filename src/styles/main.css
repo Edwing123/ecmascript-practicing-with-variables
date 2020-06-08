@@ -1,0 +1,184 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "Ruda", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #54577C;
+  line-height: 1.7;
+}
+
+.app-container {
+  max-width: 120rem;
+  width: 95%;
+  min-height: 95vh;
+  margin: 2.4vh auto;
+}
+
+.base-layout {
+  padding: 2rem;
+  border-radius: .2rem;
+  background-color: #ffffff;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+}
+
+.app-title {
+  font-size: 2rem;
+}
+
+.app-clock {
+  margin: 0 0 0 auto;
+  font-size: 1.4rem;
+  user-select: none;
+}
+
+
+/* main style */
+.app-main {
+  margin: 3rem 0;
+  display: flex;
+  align-items: flex-start;
+  --grid-gutter: 1.4rem;
+}
+
+.app-main-content {
+  width: calc(100% - 25% - var(--grid-gutter));
+  margin: 0 var(--grid-gutter) 0 0;
+}
+
+.app-subtitle {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 0 3rem;
+}
+
+.app-content-title {
+  font-size: 1.8rem;
+  margin: 0 0 1.8rem;
+}
+
+.app-content-text {
+  font-size: 1.6rem;
+  margin: 0 0 2rem;
+}
+
+.inline-code {
+  color: #F03A47;
+  background-color: #D6FFF6;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+pre code {
+  font-size: 1.2rem;
+}
+
+/* content menu styles */
+.app-content-menu {
+  width: 25%;
+}
+
+/* .--menu-sticky {
+} */
+
+.app-content-menu-title {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.app-content-menu-list {
+  margin: 1.4rem 0 0;
+  list-style-position: inside;
+}
+
+.app-content-menu-item {
+  font-size: 1.6rem;
+  margin: 0 0 1rem;
+}
+
+.app-content-menu-link:link, .app-content-menu-link:visited {
+  text-decoration: none;
+  color: #2E4052;
+}
+
+.app-content-menu-link:hover, .app-content-menu-link:focus {
+  text-decoration: underline;
+color: #007CBE;
+}
+
+
+/* footer styles */
+.app-footer-text {
+  font-size: 1.5rem;
+}
+
+
+
+@media screen and (max-width: 899px) {
+  .app-main {
+    flex-wrap: wrap;
+  }
+
+  .app-main-content, .app-content-menu {
+    min-width: 100%;
+    margin: 0;
+  }
+
+  .app-main-content {
+    order: 1;
+  }
+
+  .app-content-menu {
+    order: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app-subtitle {
+    font-size: 1.8rem;
+  }
+
+  .app-content-title {
+    font-size: 1.6rem;
+  }
+
+
+  .app-content-text {
+    font-size: 1.4rem;
+  }
+
+  pre code {
+    font-size: 1.1rem;
+  }
+
+  .app-content-menu-title {
+    font-size: 1.4rem;
+  }
+
+  
+  .app-content-menu-item {
+    font-size: 1.4rem;
+  }
+  
+  
+  /* footer styles */
+  .app-footer-text {
+    font-size: 1.4rem;
+  }
+}
