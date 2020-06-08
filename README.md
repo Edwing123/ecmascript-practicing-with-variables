@@ -4,4 +4,6 @@ This time I talk about variables, what they are, why to use the and more technic
 
 ![Post page for this practice](./src/images/post-page.png)
 
+live demo: [here](https://edwing123-testing.netlify.app/)
+
 This is an ongoing project:
