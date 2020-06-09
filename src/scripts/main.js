@@ -26,9 +26,9 @@ function getPrettyDate() {
 
   // different way to format date and time
   var intLDateInstance = new Intl.DateTimeFormat(["en-US"], {
-    dateStyle: "full",
-    timeStyle: "full",
-    calendar: "gregory",
+    // dateStyle: "full",
+    // timeStyle: "full",
+    // calendar: "gregory",
     month: "long",
     day: "numeric",
     year: "numeric",
