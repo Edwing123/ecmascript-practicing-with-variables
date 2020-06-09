@@ -8,8 +8,24 @@ var log = console.log.bind(console)
 
 function getTime() {
   var today = new Date()
-  var time = today.toLocaleTimeString()
+  var time = today.toLocaleTimeString("es-US", {
+    hour12: true,
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit"
+  })
   return time
+}
+
+function getPrettyDate() {
+  var today = new Date()
+  var formattedDate = today.toLocaleString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  })
+
+  return formattedDate
 }
 
 function roughNotationInit() {
@@ -128,6 +144,9 @@ function main() {
     var time = getTime()
     timerElement.textContent = time
   }, DELAY_TIME)
+
+  var dateElement = document.getElementById("date")
+  dateElement.textContent = getPrettyDate()
 }
 
 main()

@@ -114,12 +114,11 @@ pre code {
 
 .app-content-menu-link:link, .app-content-menu-link:visited {
   text-decoration: none;
-  color: #2E4052;
+  color: #007CBE;
 }
 
 .app-content-menu-link:hover, .app-content-menu-link:focus {
   text-decoration: underline;
-color: #007CBE;
 }
 
 
@@ -145,7 +144,8 @@ color: #007CBE;
   }
 
   .app-content-menu {
-    order: 0;
+    /* order: 0; */
+    margin: 0 0 1rem 0;
   }
 }
 
