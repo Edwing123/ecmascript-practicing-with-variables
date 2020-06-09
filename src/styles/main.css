@@ -17,6 +17,11 @@ body {
   line-height: 1.7;
 }
 
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
 .app-container {
   max-width: 120rem;
   width: 95%;
@@ -63,6 +68,22 @@ body {
   font-size: 2rem;
   text-align: center;
   margin: 0 0 3rem;
+}
+
+.app-bubble-widget-wrapper {
+  margin: 0 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.app-bubble-widget {
+  display: inline-block;
+  /* background: linear-gradient(45deg, #70a1ff 50%, #2ed573 50%); */
+  background-color: #2ed573;
+  font-size: 1.4rem;
+  padding: .2rem .8rem;
+  margin: 0 0 .6rem .4rem;
+  border-radius: 1rem;
 }
 
 .app-content-title {

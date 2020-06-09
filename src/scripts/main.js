@@ -12,20 +12,30 @@ function getTime() {
     hour12: true,
     hour: "2-digit",
     minute: "2-digit",
-    second: "2-digit"
   })
   return time
 }
 
 function getPrettyDate() {
   var today = new Date()
-  var formattedDate = today.toLocaleString("en-US", {
-    year: "numeric",
+  // var formattedDate = today.toLocaleString("en-US", {
+  //   year: "numeric",
+  //   month: "long",
+  //   day: "numeric"
+  // })
+
+  // different way to format date and time
+  var intLDateInstance = new Intl.DateTimeFormat(["en-US"], {
+    dateStyle: "full",
+    timeStyle: "full",
+    calendar: "gregory",
     month: "long",
-    day: "numeric"
+    day: "numeric",
+    year: "numeric",
+    weekday: "long"
   })
 
-  return formattedDate
+  return intLDateInstance.format(today)
 }
 
 function roughNotationInit() {
@@ -152,5 +162,4 @@ function main() {
 main()
 
 
-var isBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight
-log(isBottom)
+// var isBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight
